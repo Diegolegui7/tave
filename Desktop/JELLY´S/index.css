@@ -1,0 +1,534 @@
+/** Configuraciones generales **/
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 90%;
+}
+
+
+.btn-gott{
+    background-color: #ffca2c;
+    border-radius: 10px;
+    color: black;
+    border:none;
+    padding: 5px 20px 5px 20px;
+    font-weight: bold;
+    transition: 400ms ease-in-out;
+}
+
+/** Configuraciones del Proyecto y elementos **/
+
+/* --- HEADER --- */
+header{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    position: fixed;
+    z-index: 999 ; 
+}
+
+header .container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;    
+}
+
+#logo-container{
+    z-index: 1;
+}
+
+header nav{
+    height: 100%;
+    width: 96%;
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+nav a{
+    position: relative;
+    color: white;
+    font-size: 22px;
+    text-decoration: none;
+}
+a:link{
+    text-decoration: none;
+}
+
+nav a::after{
+    content: '';
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 50%;
+    background-color: #ffca2c;
+    width: 0%;
+    margin: 0 auto;
+    height: 2px;
+    transition: 600ms;
+    opacity: 0;
+}
+
+header a:hover{
+    transition: 300ms;
+    color: #ffca2c;
+}
+header a:hover::after{
+ opacity: 1;
+ left: 10%;
+ width: 80%;
+}
+
+
+#carritoIcon{
+    width: 45px;
+    height: 45px;
+    transition: 400ms;
+    z-index: 1;
+}
+
+#carritoIcon:hover{
+    transform: scale(1.04);
+    filter: drop-shadow(0px 0px 5px yellow );
+}
+
+.header-inv{
+    height: 80px;
+    width: 100%;
+}
+
+/* --- SLIDER --- */
+
+#carouselGott{
+    background-color: #333;
+}
+
+.carousel-item{
+    height: 400px;
+    color: white;
+    background-color: #333;
+    text-align: center;
+    color: #ffca2c;
+}
+.carousel-item .container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+/* --- Area de Market --- */
+
+#market{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #f6f6f6;
+    color: #ffca2c;
+    padding: 20px
+}
+
+#market .container{
+    width: 100%;
+    padding: 0;
+}
+
+#areaMarket{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 33% 33% 33%;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 10px; margin-bottom: 10px;
+    padding: 10px;
+}
+
+#areaMarket .card{
+    border-radius: 50px;
+    margin:15px;
+    box-shadow: 10px 10px 10px rgb(20 18 18 / 30%);
+    overflow: hidden;
+    background-color: #222;
+    transition: 300ms ease-out;
+}
+
+#areaMarket .card:hover{
+    box-shadow: 10px 10px 20px rgb(20 18 18 / 60%);
+    transform: scale(1.04);
+}
+
+#areaMarket .card-img-top{
+    transition: 300ms ease-out;
+}
+#areaMarket .card:hover .card-img-top{
+    transform: scale(1.05);
+}
+
+#areaMarket .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#areaMarket .card-title{
+    width: 98%;
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+    font-size: 22px;
+    font-weight: 600;
+    border-bottom: 3px solid #f6f6f6;
+}
+#areaMarket .card-text{
+    font-size: 18px;
+}
+
+#areaMarket .precio{
+    font-size: 20px;
+}
+
+#areaMarket .btn-gott:hover{
+    background-color: green;
+}
+
+
+/* --- Contacto --- */
+
+/* #contacto{
+    font-family: 'Noto Sans', sans-serif;
+    background-image: url(../img/piedra.jpg); 
+  } */
+
+#contacto .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario {
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fbfbfb;
+
+}
+
+input{
+    background-color: #fbfbfb; 
+    width: 100%; 
+    height: 40px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: #ffca2c; 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+}
+  
+  
+textarea{
+    background-color: #fbfbfb; 
+    width: 100%; 
+    height: 150px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: #ffca2c; 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+    padding-top: 15px; 
+}
+
+label{
+    display: block; 
+    float: center;  
+}
+
+#contacto span{
+    color: #ffca2c; 
+}
+  
+  
+  #contacto .aviso{
+    font-size: 13px;  
+    color: #0e0e0e;  
+  }
+  
+  
+#contacto h1{
+    font-size: 39px;  
+    text-align: letf; 
+    padding-bottom: 20px; 
+    color: #ffca2c
+}
+  
+  
+#contacto h3{
+    font-size: 16px; 
+    padding-bottom: 30px;
+    color: #0e0e0e;   
+}
+  
+  
+#contacto p{
+    font-size: 14px; 
+    color: #0e0e0e; 
+}
+  
+#enviar{
+    height: 45px; 
+    padding-left: 5px;
+    padding-right: 5px;  
+    margin-bottom: 20px; 
+    margin-top: 10px;   
+    text-transform: uppercase;
+    border-style: solid; 
+    border-radius: 10px;  
+    width: 100%;   
+    cursor: pointer;
+}
+
+  
+::-webkit-input-placeholder {
+   color: #a8a8a8;
+}
+  
+  
+::-webkit-textarea-placeholder {
+   color: #a8a8a8;
+}
+  
+
+.formulario input:focus{
+    outline:0;
+    border: 1px solid #97d848;
+}
+  
+  
+.formulario textarea:focus{
+    outline:0;
+    border: 1px solid #97d848;
+}
+  
+.carta-redes{
+      display: flex;
+      justify-content: space-evenly;
+      max-width: 420px;
+}
+  
+.formulario-redes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+    text-align: center;
+    font-weight: 600;
+    width: 80%;
+    max-width: 420px;
+}
+
+.carta-redes-container{
+    width: 40%;
+}
+
+
+.carta-redes img{
+      width: 80px;
+      height: auto;
+      gap: 5px;
+      padding: 10px;
+}
+
+
+
+/* --- Carrito  --- */
+#carrito{
+    position: fixed;
+    right: 10px;
+    top: 90px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 650px;
+    max-height: 380px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px lightgoldenrodyellow;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 16;
+}
+
+#titles-carrito{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 15% 28% 15% 18% 24%;
+    border-bottom: 5px solid #ffca2c;
+}
+
+#body-carrito{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 95%;
+}
+
+
+#carrito-card-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto 0px auto 0px;
+    margin-top: 10px;
+    max-height: 222px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+#carrito-card-container::-webkit-scrollbar{
+    width: 7px;
+}
+#carrito-card-container::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: rgba(255, 202, 44, 0.9);
+    border: 1px solid orange;
+}
+
+
+.carrito-card{
+    width: 95%;
+    margin-top: 5px; margin-bottom: 5px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 15% 28% 15% 18% 24%;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-around; */
+    box-shadow: 0px 0px 6px white;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+}
+.carrito-card p{
+    margin: 10px auto;
+}
+
+.carrito-card-img-container img{ 
+    height: auto;
+    width: 100%;
+    max-width: 60px;
+}
+
+.carrito-btn-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.botones-carrito{
+    padding: 0;
+    text-decoration: none;
+    font-size: 40px;
+    background: transparent;
+    border: none;
+}
+
+.boton-suma{
+    color: green;
+}
+.boton-suma:hover , .boton-resta:hover{
+    transition: 200ms;
+    cursor: default;
+}
+.boton-suma:hover{
+    color: green;
+    filter: drop-shadow(0px 0px 6px lawngreen);
+}
+.boton-resta{
+    color: rgb(255, 0, 0);
+}
+.boton-resta:hover{
+        color: rgb(255, 34, 34);
+        filter: drop-shadow(0px 0px 6px red);
+}
+
+.trashIcon:hover {
+    color: #f00;
+}
+
+
+#compraFinal{
+    margin: 10px 0px;
+}
+
+/* --- Footer --- */
+footer{
+    text-align: center;
+    background-color: black;
+    color: #ffca2c;;
+    font-style: italic;
+}
+footer p{margin: 0px;}
+
+
+/* !** CSS PARA DISPOSITIVOS MÓVILES **! */
+
+@media(max-width:398px){
+    header nav a{
+        font-size: 20px;
+    }
+}
+
+@media(max-width:740px){
+    /* --- Header --- */
+    header .container{
+        padding: 0;
+    }
+
+    header nav{
+        position: inherit;  
+        gap: 15px;
+    }
+
+    /* --- Area de Market --- */
+    #areaMarket{
+        grid-template-columns: 100%;      
+    }
+    
+    /* --- Carrito * ---*/
+    #carrito{
+        left: 5%;
+        width: 90%;
+        background-color: rgba(0, 0, 0, 0.95);
+    }
+}
+
+@media(max-width:1080px){
+    #logo-text{
+        display: none;
+    }
+}
